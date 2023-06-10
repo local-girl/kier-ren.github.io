@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin');
+
+body{
+    color: rgb(92, 6, 6);
+    font-size: 18px;
+    font-family: "Cabin", sans-serif;
+    background-color:rgb(255, 241, 241);
+    background-image: url('https://i.imgur.com/epXpRB0.png');
+    background-blend-mode: overlay;
+}
+
+#title{
+    font-family: "Cabin", sans-serif;
+    color: rgb(0, 28, 51);
+    font-size: 44px;
+    text-align:center;
+}
+
+#description{
+    text-align: center;
+    font-size: 24px;
+}
+
+/* both survey-form + images */
+ul{ 
+    list-style-type: none;
+    padding: 1em;
+}
+
+#survey-form{
+    text-align:center;
+    background-color: rgba(100, 73, 99, 0.4);
+    width: 600px;
+    padding: 0 1.5em;
+    margin: 0 auto;
+    border-radius: 3%;
+    line-height: 2em;
+}
+
+/* Survey elements */
+
+#survey-form ul li{
+    background-color:rgba(132, 126, 158, 0.4);
+    border-radius: 2.5%;
+}
+
+#name, #email, #number{
+    font-family: "Cabin", sans-serif;
+    font-size: .9em;
+    color:rgb(92, 6, 6);
+    background-color:rgb(255, 241, 241);
+    text-align: justify;
+    width: 200px;
+}
+
+#number{
+    width: auto;
+}
+
+#dropdown{
+    font-family: "Cabin", sans-serif;
+    font-size: .9em;
+    color: rgb(92, 6, 6);
+    background-color: rgb(255, 241, 241);
+}
+
+#soup-checkboxes{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+}
+
+#comments{
+    font-family:"Cabin", sans-serif;
+    font-size: .9em;
+    color: rgb(92, 6, 6);
+    background-color: rgb(255, 241, 241);
+    border-radius: 2%;
+    width: 300px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 300px; 
+    min-width: 300px;
+}
+
+#submit{
+    font-family:"Cabin", sans-serif;
+    font-size: 1.2em;
+    color: rgb(92, 6, 6);
+    background-color: rgb(209, 122, 157);
+    border-radius: 15%;
+    border-width: 8px;
+    border-color: rgb(241, 179, 204);
+}
+
+#submit:hover{
+    background-color: rgb(179, 101, 132);
+}
+
+/* soup images */
+.image-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-list figcaption{
+    text-align: center;
+}
+
+.image-list img{
+    border-radius: 20%;
+    width: 145px;
+    height: auto;
+    padding: 8px;
+    max-width: 100%;
+}
+
+footer{
+    font-size: 2;
+}
+
+
+/* Adaptation for smaller screens */
+@media(max-width:800px){
+    #survey-form{
+        width: 100%;
+        padding: 0px;
+    }
+    #survey-form ul li{
+        max-width: 100%;
+    }
+}
+
+</style>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin">
+        <title>Soup Survey -- FCC Survey Form Project</title>
+    </head>
+    <body>
+
+        <section>
+        <h1 id=title>
+        soup opinion survey
+        </h1>
+
+        <p id=description>
+            this world contains many soups
+            <br>we value your input and your soup opinions
+        </p>
+
+        </section>
+
+        <main>
+        <form id="survey-form">
+            <ul>
+
+                <p>  
+                    <li>
+                        <label for="name" id="name-label">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </li>
+                </p>  
+
+                <p>
+                    <li>
+                        <label for="email" id="email-label">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="your_email@example.com" required>
+                    </li>
+                </p>
+
+                <p>
+                    <li>
+                        <label for="number" id="number-label">Age</label><br>
+                        <input type="number" id="number" name="age" placeholder="Age" min=1 max=120>
+                    </li>
+                </p>
+
+                <li>
+                <!--Radio buttons for Likes or Dislikes Soup in general-->
+                    <p>Do you like soup?<br>
+                        <label for="like-soup"><input id="like-soup" type=radio name="like-dislike-soup" value="like-soup">Yes</label><br>
+                        <label for="dislike-soup"><input id="dislike-soup" type=radio name="like-dislike-soup" value="dislike-soup">No</label>
+                    </p>
+                </li>
+
+                <li id=soup-checkboxes>
+                <!--Checkboxes for Liked Soups-->
+                    <p>Which of these soups do you like?<br>
+                        <label for="likes Miso Soup"><input id="likes Miso Soup" type=checkbox name="liked-soups" value="likes Miso Soup">Miso Soup</label><br>
+                        <label for="likes Pasta Soup"><input id="likes Pasta Soup" type=checkbox name="liked-soups" value="likes Miso Soup">Pasta Soup</label><br>
+                        <label for="likes Chicken and Vegetable Soup"><input id="likes Chicken and Vegetable Soup" type=checkbox name="liked-soups" value="likes Chicken and Vegetable Soup">Chicken and Vegetable Soup</label><br>
+                        <label for="likes Lima Bean Soup"><input id="likes Lima Bean Soup" type=checkbox name="liked-soups" value="likes Lima Bean Soup">Lima Bean Soup</label>
+                    </p>
+                </li>
+
+            
+                <!--Favorite soup dropdown-->
+                <li>
+                    <p>Out of these, which is your favorite soup?<br>
+                        <select id="dropdown">
+                            <option value="Miso Soup">Miso Soup</option>
+                            <option value="Pasta Soup">Pasta Soup</option>
+                            <option value="Chicken and Vegetable Soup">Chicken and Vegetable Soup</option>
+                            <option value="Lima Bean Soup">Lima Bean Soup</option>
+                            <option value="None">None of them</option>
+                        </select>
+                    </p>
+                </li>
+
+
+                <li>
+                    <p>Do you consider tea a soup?<br>
+                        <label for="tea-is-soup"><input id="tea-is-soup" type="radio" name="is-tea-soup" value="yes">Yes</label><br>
+                        <label for="tea-is-not-soup"><input id="tea-is-not-soup" type="radio" name="is-tea-soup" value="no">No</label>
+                    </p>
+                </li>
+            
+                <li>
+                    <p>What other soups do you like?<br>
+                        <label for="comments"></label>
+                        <textarea id="comments" name="other liked soups" placeholder="Enter other soups you enjoy"></textarea>
+                    </p>
+                </li>
+
+            
+            <label for="submit"><button type="submit" id="submit">Submit</button></label>
+
+        </ul>
+        </form>
+        </main>
+
+        <ul class="image-list">
+
+            <li>
+                <img src="https://i.imgur.com/9IWOXV6.jpg" alt="Miso Soup">
+                <figcaption>Miso Soup</figcaption>
+            </li>
+
+            <li>
+                <img src="https://i.imgur.com/Xr24C8Z.jpg" alt="Pasta Soup">
+                <figcaption>Pasta Soup</figcaption>
+            </li>
+
+            <li>
+                <img src="https://i.imgur.com/jIujNVg.jpg" alt="Chicken and Vegetable Soup">
+                <figcaption>Chicken & Vegetable<br> Soup</figcaption>
+            </li>
+            
+            <li>
+                <img src="https://i.imgur.com/enifOmd.jpg?1" alt="Lima Bean Soup">
+                <figcaption>Lima Bean Soup</figcaption>
+            </li>
+
+            <li>
+                <img src="https://i.imgur.com/JlC4R5O.jpg" alt="A cup of tea">
+                <figcaption>A cup of tea</figcaption>
+            </li>
+            
+        </ul>
+
+
+    <footer>
+        Soup & drink images from 
+        <a href="http://www.schoolphotoproject.com"> SchoolPhotoProject.com </a>
+        <br>
+        Background image by <a href="https://pixabay.com/users/yayangart-13477958/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5725356">yayang art</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5725356">Pixabay</a>
+    </footer>
+
+</body>
+</html>

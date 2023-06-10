@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Josefin+Sans:wght@300;400&&family=Josefin+Slab:wght@300;400');
+
+
+:root{
+    --about-box-width: 300px;
+    --about-box-height: 200px;
+    --header-height: 108px;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    color:rgb(27, 27, 27);
+    background-color: rgb(228, 171, 97);
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-image: url("https://i.imgur.com/reYH8wh.jpg");
+    opacity: 10%;
+    background-size: 200px;
+}
+
+h2{
+    font-size: 40px;
+    font-family: "Josefin Sans", "Josefin Slab", "sans-serif";
+    font-weight: normal;
+}
+
+p{
+    font-size: 18px;
+}
+
+a, a:hover, a:visited, a:active{
+    color:rgb(48, 15, 0);
+}
+
+/* Header */
+#header{
+    font-family: "Mochiy Pop One", sans-serif;
+    display: inline-flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: var(--header-height);
+    top: 0;
+    left: 0;
+    background-color:rgb(206, 102, 53);
+    color:rgb(255, 239, 233);
+}
+
+/*Header Left Side*/
+#header-logo{
+    display:inline-flex;
+    flex-direction:row;
+    margin-left: 80px;
+    align-items: center;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+#header-img{
+    width: 100px;
+    height: 100px;
+    margin: -6px 10px;
+}
+
+#header-text{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+#header-title, #header-subtitle{
+    font-family: "Josefin Sans", "sans-serif";
+    font-weight: bold;
+}
+
+#header-title{
+    font-size: 44px;
+    margin: 15px 0 0 15px;
+}
+
+#header-subtitle{
+    font-size: 24px;
+    height: 1.5em;
+    margin: 0 0 0 15px;
+    padding: 4px 3px;
+}
+
+/*Header Right Side*/
+#header nav{
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#header nav a+a{
+    margin-left: 25px;
+}
+
+#header nav a{
+    color:rgb(255, 239, 233);
+    text-decoration: none;
+    padding: 8px;
+}
+
+
+/* Main */
+
+/* About */
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*manually centering text*/
+#about .spacing{
+    height: var(--header-height);
+    width: 0;
+    border:none;
+}
+
+#about #boxes{
+    width: 80%;
+    display: grid;
+    height: calc(2*var(--about-box-height) + 140px);
+    grid-template-columns: repeat(4, 1fr var(--about-box-width)) 1fr;
+    grid-template-rows: 1fr var(--about-box-height) 1fr var(--about-box-height) 1fr;
+}
+
+#about .about-box{
+    height: var(--about-box-height);
+    width: var(--about-box-width);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color:bisque;
+    opacity: 90%;
+    z-index: -1;
+}
+
+#about p{
+    font-size: 22px;
+    text-align: justify;
+}
+
+#who-we-are{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#our-mission{
+    grid-column: 4;
+    grid-row: 4;
+}
+
+#our-motto{
+    grid-column: 6;
+    grid-row: 2;
+}
+
+#our-investors{
+    grid-column: 8;
+    grid-row: 4;
+}
+
+#about h2{
+    text-align: center;
+}
+
+
+/* Overview */
+#overview{
+    text-align: center;
+    padding-top: var(--header-height);
+    margin-top: 0;
+}
+
+iframe{
+    display: block;
+    margin: 50px auto 0 auto;
+    width: 560px;
+    height: 315px;
+    padding: 20px;
+    background-color:rgb(241, 172, 67);
+    border-radius: 5px;
+}
+
+input[type="email"]{
+    padding: 2px;
+    border-radius: 1px;
+}
+
+input[type="submit"]{
+    border: none;
+    background-color:rgb(221, 72, 61);
+    color:rgb(236, 236, 236);
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+/* Menu */
+#order{
+    text-align: center;
+    padding-top: var(--header-height);
+}
+
+#order h2{
+    font-size: 40px;
+}
+
+.soup-gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80vw;
+    margin: auto auto;
+}
+
+/*img + caption*/
+.soup-gallery figure{
+    width: 200px;
+    height: 210px;
+    padding: 15px;
+    padding-top: 0px;
+    margin: 15px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+/*img*/
+.soup-gallery img{
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.soup-gallery figcaption{
+    font-size: 22px;
+    text-align: center;
+    margin: auto auto;
+}
+
+.menu-item{
+    margin: 15px 20px;
+    border-radius: 5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color:rgb(255, 247, 174);
+    opacity: 90%;
+    z-index: -1;
+}
+
+.buy{
+    padding: 15px 30px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    border: none;
+    user-select: none;
+    background-color:rgb(231, 114, 78);
+}
+
+.buy:active, .buy:hover{
+    background-color:rgb(247, 94, 48);
+    box-shadow: inset 0px 0px 15px rgb(247, 221, 204);
+    color: rgb(247, 221, 204)
+}
+
+
+/* Footer */
+
+footer p{
+    display: block;
+    position: relative;
+    font-size:2;
+    margin-left: 10px;
+    padding: 2px 20px;
+}
+
+
+/**Media Size Adjustments*/
+
+/* Small-width devices */
+@media(max-width:800px){
+     /* Header */
+    #header{
+        margin: 0;
+        padding: 0;
+    }
+    #header-logo{
+        margin-left: 0;
+        width: 50%;
+        margin: 0;
+    }
+    #header-title, #header-subtitle{
+        margin: 0;
+    }
+    #header nav{
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 0;
+        width: 50%;
+    }
+    #header nav a{
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+    }
+    #header nav a+a{
+        margin: 1px;
+    }
+
+    /* Main */
+
+    /* About */
+    #about #boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: calc(4*var(--about-box-height) + 140px);
+        margin-bottom: 80px;
+    }
+    #about .about-box{
+        margin: 40px;
+    }
+    
+    /* Overview */
+    iframe{
+        width: 90vw;
+        padding: 0px;
+        margin: 0 auto;
+        max-width: 560px;
+    }
+
+    /* Order */
+    .soup-gallery{
+        width: 100vw;
+    }
+}
+
+
+
+/* Mid-width devices */
+@media(max-width:1200px) and (min-width:801px){
+
+    /* Header */
+    #header-logo{
+        margin-left: 0;
+        width: 50%;
+    }
+    #header nav{
+        margin: 0 10px;
+    }
+    #header nav a+a{
+        margin: 2px;
+    }
+}
+
+/* Mid-width devices, starting earlier */
+@media (max-width:1380px) and (min-width: 801px){
+    /* About */
+    #about #boxes{
+    width: 100%;
+    grid-template-columns: 1fr var(--about-box-width) 1fr var(--about-box-width) 1fr;
+    grid-template-rows: 1fr var(--about-box-height) 1fr var(--about-box-height) 1fr;
+    }
+    #who-we-are{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #our-mission{
+        grid-column: 4;
+        grid-row: 2;
+    }
+    #our-motto{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    #our-investors{
+        grid-column: 4;
+        grid-row: 4;
+    }
+}
+
+/*Smooth Scroll optional*/
+@media (prefers-reduced-motion: no-preference){
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+</style>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One">
+        <title>Product Landing Page - FCC Project</title>
+    </head>
+<body>
+
+<div class="background"></div>
+
+
+<header id="header">
+    <!--left side-->
+    <div id="header-logo">
+        <img src="https://i.imgur.com/SLgkQAS.png" id="header-img" alt="Soupreme logo">
+        <div id="header-text">
+            <h2 id="header-title">Soupreme</h2>
+            <h3 id="header-subtitle">Mail Order Soup</h3>
+        </div>
+    </div>
+
+    <!--right side-->
+    <nav id="nav-bar">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#order" class="nav-link">Menu</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="about">
+        <div class="spacing"></div>
+
+        <div id="boxes">
+
+        <div class="about-box" id="who-we-are">
+            <h2>Who We Are</h2>
+            <p>We're Stewart and Arthur, two elderly friends with a a dream of soup.</p>
+        </div>
+        
+        <div class="about-box" id="our-mission">
+            <h2>Our Mission</h2>
+            <p>We plan to put soup on the moon</p>
+        </div>
+
+        <div class="about-box" id="our-motto">
+            <h2>Our Motto</h2>
+            <p>Anything can be a soup if you want it to be</p>
+        </div>
+        
+        <div class="about-box" id="our-investors">
+            <h2>Our Investors</h2>
+            <p>Hector, also known as "Incompetent Paul"</p>
+            <p>David</p>
+        </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="overview">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <h2>Stay updated on all things soup</h2>
+            <label for="email" id="email-label"></label><input type="email" id="email" name="email" placeholder="your_email@example.com" required></label>
+            <input type="submit" id="submit" value="Subscribe">
+        </form>
+        <iframe id="video" src="https://www.youtube-nocookie.com/embed/dshtGUi3gto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+
+    <section id="order">
+        <h2>What makes a soup, soup</h2>
+        <div class="soup-gallery">
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/9IWOXV6.jpg" alt="Miso Soup"><figcaption>Miso</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/jIujNVg.jpg" alt="Chicken and Vegetable Soup"><figcaption>Chicken & Vegetable</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/enifOmd.jpg" alt="Lima Bean Soup"><figcaption>Lima Bean</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/Xr24C8Z.jpg" alt="Pasta Soup"><figcaption>Pasta</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/oX7X9RI.png" alt="Butternut Squash Soup"><figcaption>Butternut Squash</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/s0wB8dV.png" alt="French Onion Soup"><figcaption>French Onion</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/nVa3Zkr.jpg" alt="Tomato Soup"><figcaption>Tomato</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/1IWTuH0.jpg" alt="Clam Chowder"><figcaption>Clam Chowder</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/1DPPTnf.png" alt="Cream of Mushroom Soup"><figcaption>Cream of Mushroom</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/T5LhB9a.png" alt="Pumpkin Soup"><figcaption>Pumpkin</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/330q4sN.png" alt="Vegetable Soup"><figcaption>Vegetable</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+
+            <div class="menu-item">
+                <figure><img src="https://i.imgur.com/iXvyyBx.png" alt="Spicy Prawn Soup"><figcaption>Spicy Prawn</figcaption></figure>
+                <button class="buy" value="add-to-cart">Buy</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Soup images from <a href="http://www.schoolphotoproject.com">SchoolPhotoProject.com</a>, <a href="https://www.pexels.com">Pexels</a>, and <a href="https://www.pixabay.com/">Pixabay</a></p>
+    <p>Logo and Video from <a href="https://www.youtube.com/c/callmekevin">Call Me Kevin</a> on YouTube</p>
+</footer>
+
+</body>
+</html>
+
