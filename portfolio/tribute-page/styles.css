@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200');
+
+html{
+    font-size: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    color:aliceblue;
+    background: url('https://i.imgur.com/F42UJEz.jpg');
+    background-color:rgb(7, 24, 56);
+    background-blend-mode: multiply;
+}
+
+a{
+    color:rgb(242, 255, 255);
+}
+
+#title-section{
+    text-align:center;
+}
+
+#img-div{
+    display:block;
+    width: 50vw;
+    text-align:center;
+    padding: 15px 0px 15px 0px;
+    color: aliceblue;
+    font-size: 22px;
+    margin: auto auto;
+    border-radius: 4px;
+    background-color:rgba(50, 45, 83, 0.205);
+}
+
+#image{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto auto;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+#tribute-info{
+    font-size: 18px;
+    width: 90vw;
+    margin: auto auto;
+}
+
+#timeline{
+    display: block;
+    background-color: rgba(13, 13, 54, 0.767);
+    font-size: 1.3rem;
+    color:aliceblue;
+    width: 80vw;
+    margin: auto auto;
+    padding: 10px 30px 10px 30px;
+    border-radius: .8rem;
+}
+
+#timeline ul{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+#timeline ul li{
+    padding-bottom: 1.4rem;
+}
+
+.timeline-date{
+    font-style:italic;
+    color:rgb(72, 131, 199);
+    font-size: 2rem;
+}
+
+#links{
+    margin: auto auto;
+    width: 50vw;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+#footer{
+    margin: auto auto;
+    width: 50vw;
+}
+
+/* Adaptation for smaller screens */
+@media(max-width:800px){
+    #image{
+        width:50vw;
+        max-width: 100%;
+        padding: 0px;
+    }
+}

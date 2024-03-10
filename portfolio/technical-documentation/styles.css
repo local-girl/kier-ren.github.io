@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200');
+
+html{
+    font-size: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: rgb(247, 239, 229);
+}
+
+#main-doc{
+    font-size:16px;
+    display:block;
+    width: 70%;
+    margin-left: 320px;
+    z-index: 0;
+}
+
+.main-section::not(first-of-type){
+    padding-top: 30px;
+}
+
+.main-section a{
+    font-weight: bold;
+}
+
+#main-doc img{
+    display: block;
+    margin: auto auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+code{
+    display: block;
+    position: relative;
+    word-wrap: normal;
+    word-break: normal;
+    text-align: left;
+    border-radius: 3px;
+    background-color:rgb(201, 201, 201);
+    font-size: 14px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.inline-code{
+    display: inline;
+    padding: 3px;
+    margin: 2px 2px 0px 0px;
+}
+
+nav{
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align:left;
+    width: 300px;
+    background-color: grey;
+    height: 100vh;
+    padding:0px;
+    z-index: 1;
+    margin: 0 0;
+}
+
+nav header{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+nav ul{
+    list-style:none;
+    font-size: 20px;
+    padding: 0px;
+    width: 100%;
+}
+
+nav li{
+    width:100%;
+    position:relative;
+    background-color:rgb(139, 139, 139); /*background-color here lets the text be indepedently indented w/o moving the bounding box/color*/
+}
+
+#nav-list li + li {
+    margin-top: 20px;
+}
+
+nav a{
+    text-align:left;
+    text-decoration: none;
+    color:black;
+    display:block;
+    width: 100%;
+    padding-top:.25em;
+    padding-bottom:.25em;
+    border-radius: 2px;
+    padding-left: 20px; /*20px left and right padding and width 40px less than container centers the text Container while keeping text aligned left, also lets the whole box have a click-action*/
+    padding-right: 20px;
+    width: 260px;
+}
+
+nav li:hover{
+    background-color:rgb(185, 185, 185); /*having the hover on the li instead of a let's the whole box chance color instead of the center text box*/
+}
+
+header{
+    font-size:32px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 24px;
+}
+
+.indent{
+    margin-left: 30px;
+}
+
+.indent_dbl{
+    margin-left: 60px;
+}
+
+.CSS_example{
+    width: 80%;
+    background-color:white;
+    padding: 10px;
+    margin: auto auto;
+    font-family:serif;
+    font-size:18px;
+}
+
+.CSS_example div{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.CSS_example p{
+    border: 2px solid green;
+}
+
+.code_example{
+    background-color: rgb(230, 243, 221);
+}
+
+#CSS_example_box_2 p{
+    margin: 0;
+}
+
+#CSS_example_box_3 p{
+    width: 40%;
+}
+
+#CSS_example_box_4 p{
+    margin: 20px 0 40px 0;
+}
+
+#box_model_check{
+    width: 700px;
+    margin: auto auto;
+    padding: 10px;
+    padding-top: 0;
+    background-color:rgb(156, 196, 111);
+    border: 3px solid rgb(58, 80, 66);
+    border-radius: 10px;
+}
+
+#box_model_check img{
+    width: 600px;
+    border: 3px solid rgb(92, 128, 105);
+    border-radius: 3px;
+}
+
+#CSS_example_box_5 p, #CSS_example_box_6 p, #CSS_example_box_8 p{
+    border: none;
+}
+
+#CSS_example_box_6 strong{
+    font-size: 300%;
+}
+
+#CSS_example_box_7{
+    display:flex;
+}
+
+#CSS_example_box_7 div{
+    border: 1px solid green;
+}
+
+#CSS_example_box_8 strong{
+    display: block;
+}
+
+/* Adaptation for smaller screens */
+@media(max-width:800px){
+    nav, nav ul{
+        width:30vw;
+        font-size: 17px;
+    }
+    nav li{
+        padding-left: 0;
+        margin-left: 0;
+    }
+    nav a{
+        margin-left: 5px;
+        width: 28vw;
+        word-break: break-all;
+        padding: 0;
+    }
+    #main-doc{
+        margin-left: 30vw;
+        padding: 0;
+    }
+    img{
+        width: 80%;
+        max-width: 80%;
+        min-width: 70%;
+    }
+}
