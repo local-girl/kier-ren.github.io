@@ -1,0 +1,90 @@
+:root{
+  
+    --primary-color: #D5C5C8;
+    --secondary-color: #FFCAD4;
+    --background-color: #9DA3A4;
+    --app-background-color: #604D53;
+    --foreground-color: #4F5D75;
+    --highlight-color: #DB7F8E;
+  
+  }
+  html{
+    font-family: sans-serif;
+  }
+  
+  body{
+    background-color: var(--background-color);
+    font-size: 24px;
+  }
+  
+  #container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    background-color: var(--app-background-color);
+    padding: 80px 20px;
+    width: 40%;
+    margin: 18% auto;
+  }
+  
+  #input-container p{
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+  
+  input{
+    padding: 5px;
+    font-size: 24px;
+    background-color: var(--app-background-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  #check-btn{
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--foreground-color);
+    font-size: 24px;
+    border: 3px solid var(--secondary-color);
+  }
+  
+  #result{
+    background-color: var(--foreground-color);
+    border: 3px solid var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    font-size: 24px;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+@media(max-width:1200px){
+    #container{
+        padding: 50px 0;
+        padding-top: 20px;
+    }
+    #input-container{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width:800px){
+    #container{
+        width: 100%;
+        padding: 50px 0;
+        padding-top: 20px;
+    }
+    #input-container{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

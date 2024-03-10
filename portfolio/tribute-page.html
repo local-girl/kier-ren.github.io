@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200');
+
+html{
+    font-size: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    color:aliceblue;
+    background: url('https://i.imgur.com/F42UJEz.jpg');
+    background-color:rgb(7, 24, 56);
+    background-blend-mode: multiply;
+}
+
+a{
+    color:rgb(242, 255, 255);
+}
+
+#title-section{
+    text-align:center;
+}
+
+#img-div{
+    display:block;
+    width: 50vw;
+    text-align:center;
+    padding: 15px 0px 15px 0px;
+    color: aliceblue;
+    font-size: 22px;
+    margin: auto auto;
+    border-radius: 4px;
+    background-color:rgba(50, 45, 83, 0.205);
+}
+
+#image{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto auto;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+#tribute-info{
+    font-size: 18px;
+    width: 90vw;
+    margin: auto auto;
+}
+
+#timeline{
+    display: block;
+    background-color: rgba(13, 13, 54, 0.767);
+    font-size: 1.3rem;
+    color:aliceblue;
+    width: 80vw;
+    margin: auto auto;
+    padding: 10px 30px 10px 30px;
+    border-radius: .8rem;
+}
+
+#timeline ul{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+#timeline ul li{
+    padding-bottom: 1.4rem;
+}
+
+.timeline-date{
+    font-style:italic;
+    color:rgb(72, 131, 199);
+    font-size: 2rem;
+}
+
+#links{
+    margin: auto auto;
+    width: 50vw;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+#footer{
+    margin: auto auto;
+    width: 50vw;
+}
+
+/* Adaptation for smaller screens */
+@media(max-width:800px){
+    #image{
+        width:50vw;
+        max-width: 100%;
+        padding: 0px;
+    }
+}
+
+</style>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200">
+        <link rel="stylesheet" href="styles.css">
+        <title>Deep Blue Tribute Page - FCC Project</title>
+    </head>
+<body>
+<main id=main>
+
+    <div id="title-section">
+        <h1 id="title">Deep Blue</h1>
+        <h2 id="subtitle">The Artificial intelligence that defeated a Chess World Champion</h2>
+    </div>
+
+    <figure id=img-div>
+        <img id=image src="https://upload.wikimedia.org/wikipedia/commons/b/be/Deep_Blue.jpg" alt="">
+        <br>
+        <figcaption id=img-caption>One of Deep Blue's two cabinets, being displayed at California's Computer History Museum.</figcaption>
+    </figure>
+
+    <section id=tribute-info>
+        <p>
+            Deep Blue was the name given to an artificial intelligence developed to win matches against human world-class chess champions. Originally developed under the name 'ChipTest' in 1985 at Carnegie Mellon University by
+            Feng-hsiung Hsu along with a team he assembled for the project. Its name later changed to 'Deep Thought' before gaining its final name after battling against chess-champion Kasparov for the first time in 1989.
+            After over a decade of work by Feng-hsiung Hsu and his team, Deep Blue was able to defeat world-class chess champion Garry Kasparov, becoming an icon of the industry.
+        </p>
+    </section>
+
+    <section id="timeline">
+        <ul>
+            <li>
+                <strong class="timeline-date">1985 - </strong>Feng-hsiung Hsu begins development on ChipTest while studying for his doctorate at Carnegie Mellon Univeristy
+            </li>
+            <li>
+                <strong class="timeline-date">1987 - </strong>ChipTest wins the World Computer Chess Championship, undefeated against its AI opponents
+            </li>
+            <li>
+                <strong class="timeline-date">1988 - </strong>Development continues and Hsu's team evolves ChipTest into the more powerful Deep Thought
+            </li>
+            <li>
+                <strong class="timeline-date">1989 - </strong>Hsu graduates with his doctorate and and joins IBM Research along with teammate Murrary Campbell to continue work on Deep Thought
+                    <br>Deep Thought goes head-to-chipset against Garry Kasparov in a match arranged by IBM, losing 0-2
+                    <br>Deep Thought is renamed Deep Blue
+            </li>
+            <li>
+                <strong class="timeline-date">1996  - </strong>Deep Blue's first formal match against Kasparov, an eight-day, six-game match, ends in a 2-4 loss, with 1 win, 2 draws (½ points), and 3 losses
+            </li>
+            <li>
+                <strong class="timeline-date">1997 - </strong>The rematch one year later ends with a victory for Deep Blue of 3½ to Kasparov's 2½; 2 wins, 3 draws, 1 loss
+                After defeating Kasparov and cementing Deep Blue's legendary status as a feat of computer science and engineering, Deep Blue is dismantled by IBM, which denied Kasparov's demand for a rematch
+            </li>
+        </ul>
+
+        <p>Deep Blue's development began in 1985 when doctoral student Feng-hsiung Hsu of Carnegie Mellon University began work on ChipTest, the first iteration of this chess-playing supercomputer. After just two years of development, ChipTest went undefeated at the World Chess Computer Champsionship.</p>
+        <p>In 1988, Hsu's team's development on ChipTest brought it into a new evolution, Deep Thought. A year later, after Hsu graduated and joined IBM along with teammate Murrary Campbell, a match was arranged by IBM against Garry Kasparov, a renowned chess champion. Deep Thought lost 0-2.</p>
+        <p>Soon after, Deep Thought was once again renamed, and became 'Deep Blue' after IBM's nickname 'Big Blue'.</p>
+        <p>In 1996, Deep Blue's first formal match against Kasparov, an eight-day, six-game match, ended in a 2-4 loss, with 1 win, 2 draws, and 3 losses.</p>
+        <p>One year later, a final rematch against Kasparov brought Deep Blue's victory: 3½ to Kasparov's 2½, with 2 wins, 3 draws and 1 loss</p>
+        <p>After defeating Kasparov and cementing Deep Blue's legendary status as a feat of computer science and engineering, Deep Blue is dismantled by IBM, which permanently denied Kasparov's demand for a rematch</p>
+    </section>
+
+    <section id="links">
+            You can watch an in-depth documentary about Deep Blue on Fredrik Knudsen's 
+        <a href="https://www.youtube.com/watch?v=HwF229U2ba8" id=tribute-link target="_blank">YouTube channel</a>,<br>
+        Or read about it on <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)" target="_blank">Wikipedia</a>
+    </section>
+
+    <footer>
+        Deep Blue image from its <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)" target="_blank">Wikipedia</a> page<br>
+        Background image by <a href="https://pixabay.com/users/zipnon-563424/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1233546">ELLE RITTER</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1233546">Pixabay</a>
+    </footer>
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"> </script>
+</main>
+</body>
+</html>
