@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+  <title>Pokemon Search App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div id="app-container">
+    <h1>Pokémon Search App</h1>
+    <h3>Search by name or National Dex #</h3>
+    <input id="search-input" required></input>
+    <button id="search-button">Search</button>
+    <div id="pokemon-info">
+      <div id="basic-info">
+        <p id="pokemon-name"></p>
+        <p id="pokemon-id"></p>
+      </div>
+      <div id="sprite-container"></div>
+      <div id="measurements">
+        <p id="weight"></p>
+        <p id="height"></p>
+      </div>
+      <div id="types"></div>
+      <div class="table-container">
+        <table id="pokemon-stats">
+          <thead>Stats</thead>
+          <tbody>
+            <tr>
+              <td>HP</td>
+              <td id="hp" class="hidden"></td>
+            </tr>
+            <tr>
+              <td>Atk</td>
+              <td id="attack" class="hidden"></td>
+            </tr>
+            <tr>
+              <td>Def</td>
+              <td id="defense" class="hidden"></td>
+            </tr>
+            <tr>
+              <td>Sp. Atk</td>
+              <td id="special-attack" class="hidden"></td>
+            </tr>
+            <tr>
+              <td>Sp. Def</td>
+              <td id="special-defense" class="hidden"></td>
+            </tr>
+            <tr>
+              <td>Spd</td>
+              <td id="speed" class="hidden"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
